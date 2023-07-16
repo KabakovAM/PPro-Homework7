@@ -10,6 +10,7 @@ def random_names():
         letter = random.choice(string.ascii_letters)
         if letter in vowels and check_vowels == False:
             check_vowels = True
+        letter = letter.lower()
         if i == 0:
             name_list.append(letter.upper())
         else:

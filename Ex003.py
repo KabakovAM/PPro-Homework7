@@ -7,9 +7,11 @@ def mult_files():
         file_0 = num.readlines()
         file_1 = name.readlines()
         if len(file_0) > len(file_1):
-            file_1.extend(file_1)
+            while len(file_0) > len(file_1):
+                file_1.extend(file_1)
         else:
-            file_0.extend(file_0)
+            while len(file_0) < len(file_1):
+                file_0.extend(file_0)
         for line_0, line_1 in zip(file_0, file_1):
             a, b = str(line_0[:-2]).split('|')
             mult = int(a) * float(b)
